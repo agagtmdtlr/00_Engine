@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="Terrain\TerrainLodDemo.cpp">
+      <Filter>Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="PBR\HDRDemo.cpp">
+      <Filter>PBR</Filter>
+    </ClCompile>
+    <ClCompile Include="PBR\PBRBasicDemo.cpp">
+      <Filter>PBR</Filter>
+    </ClCompile>
+    <ClCompile Include="Converter\EnvironmentMap.cpp">
+      <Filter>Converter</Filter>
+    </ClCompile>
+    <ClCompile Include="Converter\ConvertMap.cpp">
+      <Filter>Converter</Filter>
+    </ClCompile>
+    <ClCompile Include="PBR\PBRIrradianceDemo.cpp">
+      <Filter>PBR</Filter>
+    </ClCompile>
+    <ClCompile Include="TestDemo.cpp" />
+    <ClCompile Include="Converter\BRDFMap.cpp">
+      <Filter>Converter</Filter>
+    </ClCompile>
+    <ClCompile Include="PBR\PBRIBLDemo.cpp">
+      <Filter>PBR</Filter>
+    </ClCompile>
+    <ClCompile Include="PBR\PBRDefferedDemo.cpp">
+      <Filter>PBR</Filter>
+    </ClCompile>
+    <ClCompile Include="PBR\PBRInteriorDemo.cpp">
+      <Filter>PBR</Filter>
+    </ClCompile>
+    <ClCompile Include="Converter\ModelConverter.cpp">
+      <Filter>Converter</Filter>
+    </ClCompile>
+    <ClCompile Include="Converter\ModelExportDemo.cpp">
+      <Filter>Converter</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Main.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Terrain\TerrainLodDemo.h">
+      <Filter>Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="PBR\HDRDemo.h">
+      <Filter>PBR</Filter>
+    </ClInclude>
+    <ClInclude Include="PBR\PBRBasicDemo.h">
+      <Filter>PBR</Filter>
+    </ClInclude>
+    <ClInclude Include="Converter\EnvironmentMap.h">
+      <Filter>Converter</Filter>
+    </ClInclude>
+    <ClInclude Include="Converter\ConvertMap.h">
+      <Filter>Converter</Filter>
+    </ClInclude>
+    <ClInclude Include="PBR\PBRIrradianceDemo.h">
+      <Filter>PBR</Filter>
+    </ClInclude>
+    <ClInclude Include="TestDemo.h" />
+    <ClInclude Include="Converter\BRDFMap.h">
+      <Filter>Converter</Filter>
+    </ClInclude>
+    <ClInclude Include="PBR\PBRIBLDemo.h">
+      <Filter>PBR</Filter>
+    </ClInclude>
+    <ClInclude Include="PBR\PBRDefferedDemo.h">
+      <Filter>PBR</Filter>
+    </ClInclude>
+    <ClInclude Include="PBR\PBRInteriorDemo.h">
+      <Filter>PBR</Filter>
+    </ClInclude>
+    <ClInclude Include="Converter\ModelConverter.h">
+      <Filter>Converter</Filter>
+    </ClInclude>
+    <ClInclude Include="Converter\ModelExportDemo.h">
+      <Filter>Converter</Filter>
+    </ClInclude>
+    <ClInclude Include="Converter\ModelConverterTypes.h">
+      <Filter>Converter</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Terrain">
+      <UniqueIdentifier>{50a647c5-4661-4068-a5fd-48bc062b4f15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PBR">
+      <UniqueIdentifier>{9c53b25e-daa6-4f67-bc96-57d478c26e7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Converter">
+      <UniqueIdentifier>{0b0bc5cb-cd21-4450-ba9e-c0240084a65a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

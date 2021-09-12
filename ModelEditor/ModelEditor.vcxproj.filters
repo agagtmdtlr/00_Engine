@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="ExportFile.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="ModelDemo.cpp">
+      <Filter>Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Converter.cpp">
+      <Filter>Writer</Filter>
+    </ClCompile>
+    <ClCompile Include="TankDemo.cpp">
+      <Filter>Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimationDemo.cpp">
+      <Filter>Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="MovementDemo.cpp">
+      <Filter>Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshDemo.cpp">
+      <Filter>Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelEditDemo.cpp">
+      <Filter>Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshWriter.cpp">
+      <Filter>Writer</Filter>
+    </ClCompile>
+    <ClCompile Include="ExportDemo.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ExportFile.h" />
+    <ClInclude Include="Main.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Types.h" />
+    <ClInclude Include="ModelDemo.h">
+      <Filter>Demo</Filter>
+    </ClInclude>
+    <ClInclude Include="Converter.h">
+      <Filter>Writer</Filter>
+    </ClInclude>
+    <ClInclude Include="TankDemo.h">
+      <Filter>Demo</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimationDemo.h">
+      <Filter>Demo</Filter>
+    </ClInclude>
+    <ClInclude Include="MovementDemo.h">
+      <Filter>Demo</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshDemo.h">
+      <Filter>Demo</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelEditDemo.h">
+      <Filter>Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshWriter.h">
+      <Filter>Writer</Filter>
+    </ClInclude>
+    <ClInclude Include="ExportDemo.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Demo">
+      <UniqueIdentifier>{4dd8cd6c-cb2c-4ef2-b495-05ecca30c876}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Writer">
+      <UniqueIdentifier>{92c85045-0aac-41c2-9eb6-3f5aa99519e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor">
+      <UniqueIdentifier>{5ba1221b-5ed6-4c1a-a847-debeb788ebb3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,566 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Framework.cpp" />
+    <ClCompile Include="Renders\Texture.cpp">
+      <Filter>Renders</Filter>
+    </ClCompile>
+    <ClCompile Include="Renders\Context.cpp">
+      <Filter>Renders</Filter>
+    </ClCompile>
+    <ClCompile Include="Renders\Shader.cpp">
+      <Filter>Renders</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\Mouse.cpp">
+      <Filter>Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\Time.cpp">
+      <Filter>Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\Window.cpp">
+      <Filter>Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\D3D.cpp">
+      <Filter>Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\Gui.cpp">
+      <Filter>Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\Keyboard.cpp">
+      <Filter>Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\Xml.cpp">
+      <Filter>Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\BinaryFile.cpp">
+      <Filter>Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\Math.cpp">
+      <Filter>Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\Path.cpp">
+      <Filter>Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\String.cpp">
+      <Filter>Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Viewer\Projection.cpp">
+      <Filter>Viewer</Filter>
+    </ClCompile>
+    <ClCompile Include="Viewer\Viewport.cpp">
+      <Filter>Viewer</Filter>
+    </ClCompile>
+    <ClCompile Include="Viewer\Orthographic.cpp">
+      <Filter>Viewer</Filter>
+    </ClCompile>
+    <ClCompile Include="Viewer\Perspective.cpp">
+      <Filter>Viewer</Filter>
+    </ClCompile>
+    <ClCompile Include="Viewer\Camera.cpp">
+      <Filter>Viewer</Filter>
+    </ClCompile>
+    <ClCompile Include="Viewer\Freedom.cpp">
+      <Filter>Viewer</Filter>
+    </ClCompile>
+    <ClCompile Include="Renders\DebugLine.cpp">
+      <Filter>Renders</Filter>
+    </ClCompile>
+    <ClCompile Include="Meshes\Mesh.cpp">
+      <Filter>Meshes</Filter>
+    </ClCompile>
+    <ClCompile Include="Meshes\MeshQuad.cpp">
+      <Filter>Meshes</Filter>
+    </ClCompile>
+    <ClCompile Include="Meshes\MeshCube.cpp">
+      <Filter>Meshes</Filter>
+    </ClCompile>
+    <ClCompile Include="Meshes\MeshGrid.cpp">
+      <Filter>Meshes</Filter>
+    </ClCompile>
+    <ClCompile Include="Meshes\MeshSphere.cpp">
+      <Filter>Meshes</Filter>
+    </ClCompile>
+    <ClCompile Include="Meshes\MeshCylinder.cpp">
+      <Filter>Meshes</Filter>
+    </ClCompile>
+    <ClCompile Include="Renders\Buffers.cpp">
+      <Filter>Renders</Filter>
+    </ClCompile>
+    <ClCompile Include="Renders\Transform.cpp">
+      <Filter>Renders</Filter>
+    </ClCompile>
+    <ClCompile Include="Renders\PerFrame.cpp">
+      <Filter>Renders</Filter>
+    </ClCompile>
+    <ClCompile Include="Renders\Renderer.cpp">
+      <Filter>Renders</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\Model.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\ModelMesh.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\ModelRender.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="Renders\Material.cpp">
+      <Filter>Renders</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\ModelClip.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\ModelAnimator.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="Meshes\MeshRender.cpp">
+      <Filter>Meshes</Filter>
+    </ClCompile>
+    <ClCompile Include="Renders\Render2D.cpp">
+      <Filter>Renders</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\Collider.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Renders\Lighting.cpp">
+      <Filter>Renders</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\Billboard.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Particle\ParticleSystem.cpp">
+      <Filter>Particle</Filter>
+    </ClCompile>
+    <ClCompile Include="Viewer\RenderTarget.cpp">
+      <Filter>Viewer</Filter>
+    </ClCompile>
+    <ClCompile Include="Viewer\DepthStencil.cpp">
+      <Filter>Viewer</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\PostEffect.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\DynamicCubeMap.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Viewer\Fixity.cpp">
+      <Filter>Viewer</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\Projector.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\Shadow.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\Frustum.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\Reflection.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\Refraction.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Environment\Terrain.cpp">
+      <Filter>Environment\Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="Environment\CubeSky.cpp">
+      <Filter>Environment\Sky</Filter>
+    </ClCompile>
+    <ClCompile Include="Environment\Water.cpp">
+      <Filter>Environment\Water</Filter>
+    </ClCompile>
+    <ClCompile Include="Environment\Rain.cpp">
+      <Filter>Environment\Weather</Filter>
+    </ClCompile>
+    <ClCompile Include="Environment\Snow.cpp">
+      <Filter>Environment\Weather</Filter>
+    </ClCompile>
+    <ClCompile Include="Environment\Sky.cpp">
+      <Filter>Environment\Sky</Filter>
+    </ClCompile>
+    <ClCompile Include="Environment\Scattering.cpp">
+      <Filter>Environment\Sky</Filter>
+    </ClCompile>
+    <ClCompile Include="Environment\Cloud.cpp">
+      <Filter>Environment\Sky</Filter>
+    </ClCompile>
+    <ClCompile Include="Environment\Dome.cpp">
+      <Filter>Environment\Sky</Filter>
+    </ClCompile>
+    <ClCompile Include="Environment\Moon.cpp">
+      <Filter>Environment\Sky</Filter>
+    </ClCompile>
+    <ClCompile Include="Particle\TrailEffect.cpp">
+      <Filter>Particle</Filter>
+    </ClCompile>
+    <ClCompile Include="Environment\TerrainLod.cpp">
+      <Filter>Environment\Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\GBuffer.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Environment\Ocean.cpp">
+      <Filter>Environment\Water</Filter>
+    </ClCompile>
+    <ClCompile Include="PBR\PostFX.cpp">
+      <Filter>PBR</Filter>
+    </ClCompile>
+    <ClCompile Include="PBR\MaterialPBR.cpp">
+      <Filter>PBR</Filter>
+    </ClCompile>
+    <ClCompile Include="Meshes\PBRMeshRender.cpp">
+      <Filter>Meshes</Filter>
+    </ClCompile>
+    <ClCompile Include="PBR\ModelAnimatorPBR.cpp">
+      <Filter>PBR</Filter>
+    </ClCompile>
+    <ClCompile Include="PBR\ModelPBR.cpp">
+      <Filter>PBR</Filter>
+    </ClCompile>
+    <ClCompile Include="PBR\ModelRenderPBR.cpp">
+      <Filter>PBR</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\GBufferPBR.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\ShadowCube.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\ShadowSpot.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenSpaceFX\SSAO.cpp">
+      <Filter>ScreenSpaceFX</Filter>
+    </ClCompile>
+    <ClCompile Include="Meshes\MeshHemiSphere.cpp">
+      <Filter>Meshes</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenSpaceFX\SSRManager.cpp">
+      <Filter>ScreenSpaceFX</Filter>
+    </ClCompile>
+    <ClCompile Include="PBR\StaticModelRender.cpp">
+      <Filter>PBR</Filter>
+    </ClCompile>
+    <ClCompile Include="PBR\MeshType.cpp">
+      <Filter>PBR</Filter>
+    </ClCompile>
+    <ClCompile Include="PBR\LightMeshRender.cpp">
+      <Filter>PBR</Filter>
+    </ClCompile>
+    <ClCompile Include="Viewer\Spin.cpp">
+      <Filter>Viewer</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Renders">
+      <UniqueIdentifier>{5f17565d-bec0-49ff-bded-c0042d39088c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Systems">
+      <UniqueIdentifier>{72bf688a-4980-43d9-80e3-051ed42328b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utilities">
+      <UniqueIdentifier>{367fcd5f-51ce-4c19-9773-c1a4c30a3fcb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Viewer">
+      <UniqueIdentifier>{d21c436c-8050-430b-ae49-edf729045aef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Environment">
+      <UniqueIdentifier>{421045ca-f3af-4694-940b-2d04575a650c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Meshes">
+      <UniqueIdentifier>{b6268246-9a0d-4351-960b-d095db9244fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects">
+      <UniqueIdentifier>{da5e3246-bede-4515-863b-c47d135441f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Model">
+      <UniqueIdentifier>{31f199cb-f127-4995-b6b3-3e625a72274f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Particle">
+      <UniqueIdentifier>{7bb7633b-7f26-449e-a395-031b093a7331}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Environment\Weather">
+      <UniqueIdentifier>{4e50f94e-7d06-4264-b783-cc391b50208a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Environment\Sky">
+      <UniqueIdentifier>{40078128-313e-40a4-9cbd-b005a3b371d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Environment\Terrain">
+      <UniqueIdentifier>{e6d6170c-4e2c-42c2-bca5-4e4dbdfced68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Environment\Water">
+      <UniqueIdentifier>{94cfd7da-eb1a-4675-9236-2f619440e901}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PBR">
+      <UniqueIdentifier>{663abdd0-109c-4de5-ab88-abeef8fa7915}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ScreenSpaceFX">
+      <UniqueIdentifier>{77be8343-a6c2-48fb-935f-23a049505153}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Framework.h" />
+    <ClInclude Include="Renders\Texture.h">
+      <Filter>Renders</Filter>
+    </ClInclude>
+    <ClInclude Include="Renders\VertexLayouts.h">
+      <Filter>Renders</Filter>
+    </ClInclude>
+    <ClInclude Include="Renders\Context.h">
+      <Filter>Renders</Filter>
+    </ClInclude>
+    <ClInclude Include="Renders\Shader.h">
+      <Filter>Renders</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\Keyboard.h">
+      <Filter>Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\Mouse.h">
+      <Filter>Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\Time.h">
+      <Filter>Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\Window.h">
+      <Filter>Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\D3D.h">
+      <Filter>Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\Gui.h">
+      <Filter>Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\IExecute.h">
+      <Filter>Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\Xml.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\BinaryFile.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\Math.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\Path.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\String.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Viewer\Perspective.h">
+      <Filter>Viewer</Filter>
+    </ClInclude>
+    <ClInclude Include="Viewer\Projection.h">
+      <Filter>Viewer</Filter>
+    </ClInclude>
+    <ClInclude Include="Viewer\Viewport.h">
+      <Filter>Viewer</Filter>
+    </ClInclude>
+    <ClInclude Include="Viewer\Orthographic.h">
+      <Filter>Viewer</Filter>
+    </ClInclude>
+    <ClInclude Include="Viewer\Camera.h">
+      <Filter>Viewer</Filter>
+    </ClInclude>
+    <ClInclude Include="Viewer\Freedom.h">
+      <Filter>Viewer</Filter>
+    </ClInclude>
+    <ClInclude Include="Renders\DebugLine.h">
+      <Filter>Renders</Filter>
+    </ClInclude>
+    <ClInclude Include="Meshes\Mesh.h">
+      <Filter>Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="Meshes\MeshQuad.h">
+      <Filter>Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="Meshes\MeshCube.h">
+      <Filter>Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="Meshes\MeshGrid.h">
+      <Filter>Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="Meshes\MeshSphere.h">
+      <Filter>Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="Meshes\MeshCylinder.h">
+      <Filter>Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="Renders\Buffers.h">
+      <Filter>Renders</Filter>
+    </ClInclude>
+    <ClInclude Include="Renders\Transform.h">
+      <Filter>Renders</Filter>
+    </ClInclude>
+    <ClInclude Include="Renders\PerFrame.h">
+      <Filter>Renders</Filter>
+    </ClInclude>
+    <ClInclude Include="Renders\Renderer.h">
+      <Filter>Renders</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\Model.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\ModelMesh.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\ModelRender.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="Renders\Material.h">
+      <Filter>Renders</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\ModelClip.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\ModelAnimator.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="Meshes\MeshRender.h">
+      <Filter>Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="Renders\Render2D.h">
+      <Filter>Renders</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Collider.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Renders\Lighting.h">
+      <Filter>Renders</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Billboard.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Particle\ParticleData.h">
+      <Filter>Particle</Filter>
+    </ClInclude>
+    <ClInclude Include="Particle\ParticleSystem.h">
+      <Filter>Particle</Filter>
+    </ClInclude>
+    <ClInclude Include="Viewer\RenderTarget.h">
+      <Filter>Viewer</Filter>
+    </ClInclude>
+    <ClInclude Include="Viewer\DepthStencil.h">
+      <Filter>Viewer</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\PostEffect.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\DynamicCubeMap.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Viewer\Fixity.h">
+      <Filter>Viewer</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Projector.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Shadow.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Frustum.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Reflection.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Refraction.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Environment\Terrain.h">
+      <Filter>Environment\Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="Environment\CubeSky.h">
+      <Filter>Environment\Sky</Filter>
+    </ClInclude>
+    <ClInclude Include="Environment\Water.h">
+      <Filter>Environment\Water</Filter>
+    </ClInclude>
+    <ClInclude Include="Environment\Rain.h">
+      <Filter>Environment\Weather</Filter>
+    </ClInclude>
+    <ClInclude Include="Environment\Snow.h">
+      <Filter>Environment\Weather</Filter>
+    </ClInclude>
+    <ClInclude Include="Environment\Sky.h">
+      <Filter>Environment\Sky</Filter>
+    </ClInclude>
+    <ClInclude Include="Environment\Scattering.h">
+      <Filter>Environment\Sky</Filter>
+    </ClInclude>
+    <ClInclude Include="Environment\Cloud.h">
+      <Filter>Environment\Sky</Filter>
+    </ClInclude>
+    <ClInclude Include="Environment\Dome.h">
+      <Filter>Environment\Sky</Filter>
+    </ClInclude>
+    <ClInclude Include="Environment\Moon.h">
+      <Filter>Environment\Sky</Filter>
+    </ClInclude>
+    <ClInclude Include="Particle\TrailEffect.h">
+      <Filter>Particle</Filter>
+    </ClInclude>
+    <ClInclude Include="Environment\TerrainLod.h">
+      <Filter>Environment\Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\GBuffer.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Environment\Ocean.h">
+      <Filter>Environment\Water</Filter>
+    </ClInclude>
+    <ClInclude Include="PBR\PostFX.h">
+      <Filter>PBR</Filter>
+    </ClInclude>
+    <ClInclude Include="PBR\MaterialPBR.h">
+      <Filter>PBR</Filter>
+    </ClInclude>
+    <ClInclude Include="Meshes\PBRMeshRender.h">
+      <Filter>Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="PBR\ModelAnimatorPBR.h">
+      <Filter>PBR</Filter>
+    </ClInclude>
+    <ClInclude Include="PBR\ModelPBR.h">
+      <Filter>PBR</Filter>
+    </ClInclude>
+    <ClInclude Include="PBR\ModelRenderPBR.h">
+      <Filter>PBR</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\GBufferPBR.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\ShadowCube.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\ShadowSpot.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenSpaceFX\SSAO.h">
+      <Filter>ScreenSpaceFX</Filter>
+    </ClInclude>
+    <ClInclude Include="Meshes\MeshHemiSphere.h">
+      <Filter>Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenSpaceFX\SSRManager.h">
+      <Filter>ScreenSpaceFX</Filter>
+    </ClInclude>
+    <ClInclude Include="PBR\StaticModelRender.h">
+      <Filter>PBR</Filter>
+    </ClInclude>
+    <ClInclude Include="PBR\RendererPBR.h">
+      <Filter>PBR</Filter>
+    </ClInclude>
+    <ClInclude Include="PBR\MeshType.h">
+      <Filter>PBR</Filter>
+    </ClInclude>
+    <ClInclude Include="PBR\LightMeshRender.h">
+      <Filter>PBR</Filter>
+    </ClInclude>
+    <ClInclude Include="Viewer\Spin.h">
+      <Filter>Viewer</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
