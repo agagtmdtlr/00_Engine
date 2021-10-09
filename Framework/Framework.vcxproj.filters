@@ -251,6 +251,9 @@
     <ClCompile Include="Viewer\Spin.cpp">
       <Filter>Viewer</Filter>
     </ClCompile>
+    <ClCompile Include="Resources\Factory.cpp">
+      <Filter>Resources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Renders">
@@ -297,6 +300,9 @@
     </Filter>
     <Filter Include="ScreenSpaceFX">
       <UniqueIdentifier>{77be8343-a6c2-48fb-935f-23a049505153}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{e18624bf-7ec1-4fac-b2b9-b6bcb3ceabda}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -561,6 +567,9 @@
     </ClInclude>
     <ClInclude Include="Viewer\Spin.h">
       <Filter>Viewer</Filter>
+    </ClInclude>
+    <ClInclude Include="Resources\Factory.h">
+      <Filter>Resources</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

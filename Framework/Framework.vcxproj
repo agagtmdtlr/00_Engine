@@ -257,6 +257,7 @@ copy /Y "$(SolutionDir)Debug\$(ProjectName).pdb" "$(SolutionDir)ParticleEditor"<
     <ClCompile Include="Renders\Shader.cpp" />
     <ClCompile Include="Renders\Texture.cpp" />
     <ClCompile Include="Renders\Transform.cpp" />
+    <ClCompile Include="Resources\Factory.cpp" />
     <ClCompile Include="ScreenSpaceFX\SSAO.cpp" />
     <ClCompile Include="ScreenSpaceFX\SSRManager.cpp" />
     <ClCompile Include="Systems\D3D.cpp" />
@@ -352,6 +353,7 @@ copy /Y "$(SolutionDir)Debug\$(ProjectName).pdb" "$(SolutionDir)ParticleEditor"<
     <ClInclude Include="Renders\Texture.h" />
     <ClInclude Include="Renders\Transform.h" />
     <ClInclude Include="Renders\VertexLayouts.h" />
+    <ClInclude Include="Resources\Factory.h" />
     <ClInclude Include="ScreenSpaceFX\SSAO.h" />
     <ClInclude Include="ScreenSpaceFX\SSRManager.h" />
     <ClInclude Include="Systems\D3D.h" />

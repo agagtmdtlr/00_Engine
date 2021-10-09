@@ -87,10 +87,10 @@ int WINAPI WinMain(HINSTANCE instance, HINSTANCE prevInstance, LPSTR param, int 
 	desc.bFullScreen = false;
 	desc.bVsync = false;
 	desc.Handle = NULL;
-	//desc.Width = 1280;
-	//desc.Height = 720;
-	desc.Width = 1920;
-	desc.Height = 1080;
+	desc.Width = 1280;
+	desc.Height = 720;
+	//desc.Width = 1920;
+	//desc.Height = 1080;
 	desc.Background = Color(0.3f, 0.3f, 0.3f, 1.0f);
 	D3D::SetDesc(desc);
 

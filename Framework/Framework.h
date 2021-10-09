@@ -13,6 +13,7 @@
 #include <iterator>
 #include <thread>
 #include <mutex>
+#include <wrl/client.h>
 using namespace std;
 
 //Direct3D

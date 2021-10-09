@@ -284,9 +284,6 @@ void PostFX::CreateResource()
 	Height = (UINT)D3D::Height();
 	// 720p : 57 thread group (¹Ý¿Ã¸²)
 	DownScaleGroups = (UINT)ceil((float)(Width * Height / 16.0f) / 1024.0f);
-	
-	
-
 
 	{
 		////////////////////////////////////////////////////////////////////////'
@@ -308,9 +305,11 @@ void PostFX::CreateResource()
 		Check(D3D::GetDevice()->CreateTexture2D(&desc, NULL, &tempRT[1]));
 		////////////////////////////////////////////////////////////////////////'
 		// Allocate Bloom Target
+		//desc.Format = DXGI_FORMAT_R8G8B8A8_TYPELESS;
 		Check(D3D::GetDevice()->CreateTexture2D(&desc, NULL, &bloomRT));
 		////////////////////////////////////////////////////////////////////////'
 		// DOF blurred Target
+		desc.Format = DXGI_FORMAT_R16G16B16A16_TYPELESS;
 		Check(D3D::GetDevice()->CreateTexture2D(&desc, NULL, &DOFRT));
 	}
 	{
@@ -344,9 +343,11 @@ void PostFX::CreateResource()
 		Check(D3D::GetDevice()->CreateUnorderedAccessView(tempRT[1], &desc, &tempUAV[1]));
 		////////////////////////////////////////////////////////////////////////'
 		// Allocate Bloom uav
+		//desc.Format = DXGI_FORMAT_R8G8B8A8_UINT;
 		Check(D3D::GetDevice()->CreateUnorderedAccessView(bloomRT, &desc, &bloomUAV));
 		////////////////////////////////////////////////////////////////////////'
 		// Allocate DOF blurred uav
+		desc.Format = DXGI_FORMAT_R16G16B16A16_FLOAT;
 		Check(D3D::GetDevice()->CreateUnorderedAccessView(DOFRT, &desc, &DOFUAV));
 		
 		////////////////////////////////////////////////////////////////////////'
@@ -376,9 +377,11 @@ void PostFX::CreateResource()
 		Check(D3D::GetDevice()->CreateShaderResourceView(tempRT[1], &desc, &tempSRV[1]));
 		////////////////////////////////////////////////////////////////////////'
 		// Allocate Bloom srv
+		//desc.Format = DXGI_FORMAT_R8G8B8A8_UINT;
 		Check(D3D::GetDevice()->CreateShaderResourceView(bloomRT, &desc, &bloomSRV));
 		////////////////////////////////////////////////////////////////////////'
-		// Allocate Bloom srv
+		// Allocate DOF srv
+		desc.Format = DXGI_FORMAT_R16G16B16A16_FLOAT;
 		Check(D3D::GetDevice()->CreateShaderResourceView(DOFRT, &desc, &DOFSRV));
 		
 		////////////////////////////////////////////////////////////////////////'
