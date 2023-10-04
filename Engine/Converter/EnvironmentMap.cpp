@@ -430,14 +430,16 @@ void EnvironmentMap::Initialize()
 	{
 		cube = new MeshRender(shader, new MeshCube());
 		Transform* transform = cube->AddTransform();
-		transform->Scale(Vector3(10, 10, 10));
+		Vector3 s(10, 10, 10);
+		transform->Scale(s);
 		cube->UpdateTransforms();
 	}
 
 	{
 		sphere = new MeshRender(shader, new MeshSphere(0.5));
 		Transform* transform = sphere->AddTransform();
-		transform->Scale(Vector3(10, 10, 10));
+		Vector3 s(10, 10, 10);
+		transform->Scale(s);
 		sphere->UpdateTransforms();
 	}
 

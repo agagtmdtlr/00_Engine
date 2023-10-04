@@ -52,7 +52,8 @@ void PBRDefferedDemo::Initialize()
 	IBL();
 	ChangeIBL();
 	UINT size = 1024;
-	shadow = new Shadow(shader, Vector3(0, 0, 0), 65, size, size);
+	Vector3 v(0, 0, 0);
+	shadow = new Shadow(shader, v, 65, size, size);
 
 	gbuffer = new GBufferPBR(shader);
 	gbuffer->DrawDebug(false);

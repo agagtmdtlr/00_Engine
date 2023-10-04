@@ -32,6 +32,7 @@ public:
 	Vector3 Right();
 
 	void World(Matrix& matrix);
+
 	Matrix& World() { return bufferDesc.World; }
 
 private:

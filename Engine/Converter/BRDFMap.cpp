@@ -1,4 +1,5 @@
 #include "stdafx.h"
+#include "Systems/D3D.h"
 #include "Converter/BRDFMap.h"
 
 BRDFMap::BRDFMap()
@@ -32,8 +33,9 @@ void BRDFMap::SaveBRDF()
 
 void BRDFMap::RenderBRDF()
 {
-	D3D::Get()->SetRenderTarget(rtvBRDF, dsvBRDF);
-	D3D::Get()->Clear(Color(0, 0, 0, 1), rtvBRDF, dsvBRDF);
+	D3D* d3d = D3D::Get();
+	d3d->SetRenderTarget(rtvBRDF, dsvBRDF);
+	d3d->Clear(Color(0, 0, 0, 1), rtvBRDF, dsvBRDF);
 
 	vertexBuffer->Render();
 	indexBuffer->Render();	

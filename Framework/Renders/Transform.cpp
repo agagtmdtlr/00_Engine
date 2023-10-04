@@ -40,7 +40,8 @@ void Transform::SetShader(Shader* shader)
 
 void Transform::Position(float x, float y, float z)
 {
-	Position(Vector3(x, y, z));
+	Vector3 v(x, y, z);
+	Position(v);
 }
 
 void Transform::Position(Vector3 & vec)
@@ -57,7 +58,8 @@ void Transform::Position(Vector3 * vec)
 
 void Transform::Scale(float x, float y, float z)
 {
-	Scale(Vector3(x, y, z));
+	Vector3 s(x, y, z);
+	Scale(s);
 }
 
 void Transform::Scale(Vector3 & vec)
@@ -74,7 +76,8 @@ void Transform::Scale(Vector3 * vec)
 
 void Transform::Rotation(float x, float y, float z)
 {
-	Rotation(Vector3(x, y, z));
+	Vector3 r(x, y, z);
+	Rotation(r);
 }
 
 void Transform::Rotation(Vector3 & vec)
@@ -91,7 +94,8 @@ void Transform::Rotation(Vector3 * vec)
 
 void Transform::RotationDegree(float x, float y, float z)
 {
-	RotationDegree(Vector3(x, y, z));
+	Vector3 r(x, y, z);
+	RotationDegree(r);
 }
 
 void Transform::RotationDegree(Vector3 & vec)

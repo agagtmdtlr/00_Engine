@@ -69,7 +69,8 @@ void Material::Ambient(Color & color)
 
 void Material::Ambient(float r, float g, float b, float a)
 {
-	Ambient(Color(r, g, b, a));
+	Color c(r, g, b, a);
+	Ambient(c);
 }
 
 void Material::Diffuse(Color & color)
@@ -79,7 +80,8 @@ void Material::Diffuse(Color & color)
 
 void Material::Diffuse(float r, float g, float b, float a)
 {
-	Diffuse(Color(r, g, b, a));
+	Color c(r, g, b, a);
+	Diffuse(c);
 }
 
 void Material::Specular(Color & color)
@@ -89,7 +91,8 @@ void Material::Specular(Color & color)
 
 void Material::Specular(float r, float g, float b, float a)
 {
-	Specular(Color(r, g, b, a));
+	Color c(r, g, b, a);
+	Specular(c);
 }
 
 void Material::Emissive(Color & color)
@@ -99,7 +102,8 @@ void Material::Emissive(Color & color)
 
 void Material::Emissive(float r, float g, float b, float a)
 {
-	Emissive(Color(r, g, b, a));
+	Color c(r, g, b, a);
+	Emissive(c);
 }
 
 void Material::DiffuseMap(string file)

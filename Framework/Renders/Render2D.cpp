@@ -5,7 +5,10 @@ Render2D::Render2D()
 	: Renderer(L"62_Render2D.fx")
 {
 	// -1 뒤에서 이미지를 바라보기
-	D3DXMatrixLookAtLH(&desc.View, &Vector3(0, 0, -1), &Vector3(0, 0, 0), &Vector3(0, 1, 0));
+	Vector3 eye(0, 0, -1);
+	Vector3 at(0, 0, 0);
+	Vector3 up(0, 1, 0);
+	D3DXMatrixLookAtLH(&desc.View, &eye, &at, &up);
 	
 	// 직교 투영 : UI
 	// Ortho  중앙을 잡아서 직교 투영

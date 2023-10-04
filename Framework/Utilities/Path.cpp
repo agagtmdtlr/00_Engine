@@ -3,6 +3,19 @@
 #include <string.h>
 #include <shlwapi.h>
 #include "String.h"
+
+#ifndef UNICODE
+#define UNICODE
+#define UNICODE_WAS_UNDEFINED
+#endif
+
+#include <Windows.h>
+
+#ifdef UNICODE_WAS_UNDEFINED
+#undef UNICODE
+#endif
+
+#include <tchar.h>
 #pragma comment(lib, "shlwapi.lib")
 
 bool Path::ExistFile(string path)
@@ -141,13 +154,17 @@ void Path::OpenFileDialog(wstring file, const WCHAR* filter, wstring folder, fun
 	wstring tempFolder = folder;
 	String::Replace(&tempFolder, L"/", L"\\");
 
+	WCHAR title[255];
+	wcscpy_s(title, L"불러오기");
+
+
 	OPENFILENAME ofn;
 	ZeroMemory(&ofn, sizeof(OPENFILENAME));
 	ofn.lStructSize = sizeof(OPENFILENAME);
 	ofn.hwndOwner = hwnd;
 	ofn.lpstrFilter = filter;
 	ofn.lpstrFile = name;
-	ofn.lpstrFileTitle = L"불러오기";
+	ofn.lpstrFileTitle = title;
 	ofn.nMaxFile = 255;
 	ofn.lpstrInitialDir = tempFolder.c_str();
 	ofn.Flags = OFN_NOCHANGEDIR;
@@ -172,13 +189,16 @@ void Path::SaveFileDialog(wstring file, const WCHAR* filter, wstring folder, fun
 	wstring tempFolder = folder;
 	String::Replace(&tempFolder, L"/", L"\\");
 
+	WCHAR title[255];
+	wcscpy_s(title, L"저장하기");
+
 	OPENFILENAME ofn;
 	ZeroMemory(&ofn, sizeof(OPENFILENAME));
 	ofn.lStructSize = sizeof(OPENFILENAME);
 	ofn.hwndOwner = hwnd;
 	ofn.lpstrFilter = filter;
 	ofn.lpstrFile = name;
-	ofn.lpstrFileTitle = L"저장하기";
+	ofn.lpstrFileTitle = title;
 	ofn.nMaxFile = 255;
 	ofn.lpstrInitialDir = tempFolder.c_str();
 	ofn.Flags = OFN_NOCHANGEDIR;

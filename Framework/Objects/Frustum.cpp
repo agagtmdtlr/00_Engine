@@ -96,28 +96,36 @@ bool Frustum::CheckCube(Vector3 & center, Vector3 & size)
 	{
 		// 1면과 8개의 점을 비교하는 과정
 		// 8개의 점 중 하나라도 ㅇ
-		if (D3DXPlaneDotCoord(&planes[i], &Vector3(center.x - size.x, center.y - size.y, center.z - size.z)) >= 0.0f)
+		Vector3 d(center.x - size.x, center.y - size.y, center.z - size.z);
+		if (D3DXPlaneDotCoord(&planes[i], &d) >= 0.0f)
 			continue;
 
-		if (D3DXPlaneDotCoord(&planes[i], &Vector3(center.x + size.x, center.y - size.y, center.z - size.z)) >= 0.0f)
+		d = Vector3(center.x + size.x, center.y - size.y, center.z - size.z);
+		if (D3DXPlaneDotCoord(&planes[i], &d) >= 0.0f)
 			continue;
 
-		if (D3DXPlaneDotCoord(&planes[i], &Vector3(center.x - size.x, center.y + size.y, center.z - size.z)) >= 0.0f)
+		d = Vector3(center.x - size.x, center.y + size.y, center.z - size.z);
+		if (D3DXPlaneDotCoord(&planes[i], &d) >= 0.0f)
 			continue;
 
-		if (D3DXPlaneDotCoord(&planes[i], &Vector3(center.x - size.x, center.y - size.y, center.z + size.z)) >= 0.0f)
+		d = Vector3(center.x - size.x, center.y - size.y, center.z + size.z);
+		if (D3DXPlaneDotCoord(&planes[i], &d) >= 0.0f)
 			continue;
 
-		if (D3DXPlaneDotCoord(&planes[i], &Vector3(center.x + size.x, center.y + size.y, center.z - size.z)) >= 0.0f)
+		d = Vector3(center.x + size.x, center.y + size.y, center.z - size.z);
+		if (D3DXPlaneDotCoord(&planes[i], &d) >= 0.0f)
 			continue;
 
-		if (D3DXPlaneDotCoord(&planes[i], &Vector3(center.x + size.x, center.y - size.y, center.z + size.z)) >= 0.0f)
+		d = Vector3(center.x + size.x, center.y - size.y, center.z + size.z);
+		if (D3DXPlaneDotCoord(&planes[i], &d) >= 0.0f)
 			continue;
 
-		if (D3DXPlaneDotCoord(&planes[i], &Vector3(center.x - size.x, center.y + size.y, center.z + size.z)) >= 0.0f)
+		d = Vector3(center.x - size.x, center.y + size.y, center.z + size.z);
+		if (D3DXPlaneDotCoord(&planes[i], &d) >= 0.0f)
 			continue;
 
-		if (D3DXPlaneDotCoord(&planes[i], &Vector3(center.x + size.x, center.y + size.y, center.z + size.z)) >= 0.0f)
+		d = Vector3(center.x + size.x, center.y + size.y, center.z + size.z);
+		if (D3DXPlaneDotCoord(&planes[i], &d) >= 0.0f)
 			continue;
 
 		return false;

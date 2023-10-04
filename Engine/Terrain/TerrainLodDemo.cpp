@@ -47,11 +47,20 @@ void TerrainLodDemo::Initialize()
 		for (int i = 0; i < 1000; i++)
 		{
 			Vector2 r = Math::RandomVec2(-50, 50);	
-			grass->Add(Vector3(r.x,5,r.y + 50), Math::RandomVec2(3, 5), 0);
+
+			Vector3 v(r.x, 5, r.y + 50);
+			Vector2 rand2(Math::RandomVec2(3, 5));
+			grass->Add(  v , rand2, 0);
 			r = Math::RandomVec2(-50, 50);
-			grass->Add(Vector3(r.x,5,r.y + 50), Math::RandomVec2(3, 5), 1);
+
+			v = Vector3(r.x, 5, r.y + 50);
+			rand2 = Math::RandomVec2(3, 5);
+			grass->Add( v ,rand2 , 1);
 			r = Math::RandomVec2(-50, 50);
-			grass->Add(Vector3(r.x,5,r.y + 50), Math::RandomVec2(3, 5), 2);
+
+			v = Vector3(r.x, 5, r.y + 50);
+			rand2 = Math::RandomVec2(3, 5);
+			grass->Add( v, rand2, 2);
 		}
 
 		grass->Pass(5);

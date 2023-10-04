@@ -27,13 +27,19 @@ void Collider::Update()
 	temp.World(transform->World());
 
 	if (init != NULL)
-		temp.World(init->World() * transform->World());
+	{
+		Matrix w = init->World() * transform->World();
+		temp.World(w);
+	}
 	
 	temp.Position(&bounding.Position);
 
-	D3DXVec3Normalize(&bounding.AxisX, &temp.Right());
-	D3DXVec3Normalize(&bounding.AxisY, &temp.Up());
-	D3DXVec3Normalize(&bounding.AxisZ, &temp.Forward());
+	Vector3 r = temp.Right();
+	Vector3 u = temp.Up();
+	Vector3 f = temp.Forward();
+	D3DXVec3Normalize(&bounding.AxisX, &r);
+	D3DXVec3Normalize(&bounding.AxisY, &u);
+	D3DXVec3Normalize(&bounding.AxisZ, &f);
 
 	Vector3 scale;
 	temp.Scale(&scale);
@@ -46,7 +52,10 @@ void Collider::Render(Color color)
 	temp.World(transform->World());
 
 	if (init != NULL)
-		temp.World(init->World() * transform->World());
+	{
+		Matrix w = init->World() * transform->World();
+		temp.World(w);
+	}
 
 	Matrix world = temp.World();
 
@@ -86,7 +95,10 @@ bool Collider::Intersection(Ray & ray, float * outDistance)
 	temp.World(transform->World()); // 충돌박스 회전된 상태로 전환
 
 	if (init != NULL)
-		temp.World(init->World() * transform->World()); // 충돌박스 회전된 상태로 전환
+	{
+		Matrix w = init->World() * transform->World();
+		temp.World(w); // 충돌박스 회전된 상태로 전환
+	}
 
 	Matrix world = temp.World();
 
@@ -198,12 +210,19 @@ bool Collider::SeperatingPlane(Vector3 & position, Vector3 & direction, Bounding
 
 	float val2 = 0.0f;
 	// 분리축 이론 // 평면 방정식의 거리랑 동일하다.
-	val2 += fabsf(D3DXVec3Dot(&(box1.AxisX * box1.HalfSize.x), &direction));
-	val2 += fabsf(D3DXVec3Dot(&(box1.AxisY * box1.HalfSize.y), &direction));
-	val2 += fabsf(D3DXVec3Dot(&(box1.AxisZ * box1.HalfSize.z), &direction));
-	val2 += fabsf(D3DXVec3Dot(&(box2.AxisX * box2.HalfSize.x), &direction));
-	val2 += fabsf(D3DXVec3Dot(&(box2.AxisY * box2.HalfSize.y), &direction));
-	val2 += fabsf(D3DXVec3Dot(&(box2.AxisZ * box2.HalfSize.z), &direction));
+
+	Vector3 v = (box1.AxisX * box1.HalfSize.x);
+	val2 += fabsf(D3DXVec3Dot(&v, &direction));
+	v = (box1.AxisY * box1.HalfSize.y);
+	val2 += fabsf(D3DXVec3Dot(&v, &direction));
+	v = (box1.AxisZ * box1.HalfSize.z);
+	val2 += fabsf(D3DXVec3Dot(&v, &direction));
+	v = (box2.AxisX * box2.HalfSize.x);
+	val2 += fabsf(D3DXVec3Dot(&v, &direction));
+	v = (box2.AxisY * box2.HalfSize.y);
+	val2 += fabsf(D3DXVec3Dot(&v, &direction));
+	v = (box2.AxisZ * box2.HalfSize.z);
+	val2 += fabsf(D3DXVec3Dot(&v, &direction));
 
 	return val > val2;
 }
@@ -221,17 +240,26 @@ bool Collider::Collision(Bounding & box1, Bounding & box2)
 	if (SeperatingPlane(position, box2.AxisY, box1, box2) == true) return false;
 	if (SeperatingPlane(position, box2.AxisZ, box1, box2) == true) return false;
 
-	if (SeperatingPlane(position, Cross(box1.AxisX, box2.AxisX), box1, box2) == true) return false;
-	if (SeperatingPlane(position, Cross(box1.AxisX, box2.AxisY), box1, box2) == true) return false;
-	if (SeperatingPlane(position, Cross(box1.AxisX, box2.AxisZ), box1, box2) == true) return false;
+	Vector3 v = Cross(box1.AxisX, box2.AxisX);
+	if (SeperatingPlane(position, v, box1, box2) == true) return false;
+	v = Cross(box1.AxisX, box2.AxisY);
+	if (SeperatingPlane(position, v, box1, box2) == true) return false;
+	v = Cross(box1.AxisX, box2.AxisZ);
+	if (SeperatingPlane(position, v, box1, box2) == true) return false;
 
-	if (SeperatingPlane(position, Cross(box1.AxisY, box2.AxisX), box1, box2) == true) return false;
-	if (SeperatingPlane(position, Cross(box1.AxisY, box2.AxisY), box1, box2) == true) return false;
-	if (SeperatingPlane(position, Cross(box1.AxisY, box2.AxisZ), box1, box2) == true) return false;
+	v = Cross(box1.AxisY, box2.AxisX);
+	if (SeperatingPlane(position, v, box1, box2) == true) return false;
+	v = Cross(box1.AxisY, box2.AxisY);
+	if (SeperatingPlane(position, v, box1, box2) == true) return false;
+	v = Cross(box1.AxisY, box2.AxisZ);
+	if (SeperatingPlane(position, v, box1, box2) == true) return false;
 
-	if (SeperatingPlane(position, Cross(box1.AxisZ, box2.AxisX), box1, box2) == true) return false;
-	if (SeperatingPlane(position, Cross(box1.AxisZ, box2.AxisY), box1, box2) == true) return false;
-	if (SeperatingPlane(position, Cross(box1.AxisZ, box2.AxisZ), box1, box2) == true) return false;
+	v = Cross(box1.AxisZ, box2.AxisX);
+	if (SeperatingPlane(position, v, box1, box2) == true) return false;
+	v = Cross(box1.AxisZ, box2.AxisY);
+	if (SeperatingPlane(position, v, box1, box2) == true) return false;
+	v = Cross(box1.AxisZ, box2.AxisZ);
+	if (SeperatingPlane(position, v, box1, box2) == true) return false;
 
 	return true;
 }

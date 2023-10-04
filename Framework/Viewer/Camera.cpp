@@ -17,7 +17,8 @@ Camera::~Camera()
 
 void Camera::Position(float x, float y, float z)
 {
-	Position(Vector3(x, y, z));
+	Vector3 v(x, y, z);
+	Position(v);
 }
 
 void Camera::Position(Vector3 & vec)
@@ -34,7 +35,8 @@ void Camera::Position(Vector3 * vec)
 
 void Camera::Rotation(float x, float y, float z)
 {
-	Rotation(Vector3(x, y, z));
+	Vector3 r(x, y, z);
+	Rotation(r);
 }
 
 void Camera::Rotation(Vector3 & vec)
@@ -51,7 +53,8 @@ void Camera::Rotation(Vector3 * vec)
 
 void Camera::RotationDegree(float x, float y, float z)
 {
-	RotationDegree(Vector3(x, y, z));
+	Vector3 r(x, y, z);
+	RotationDegree(r);
 }
 
 void Camera::RotationDegree(Vector3 & vec)
@@ -84,9 +87,12 @@ void Camera::Rotation()
 	matRotation = X * Y * Z;
 
 
-	D3DXVec3TransformNormal(&forward, &Vector3(0, 0, 1), &matRotation);
-	D3DXVec3TransformNormal(&up, &Vector3(0, 1, 0), &matRotation);
-	D3DXVec3TransformNormal(&right, &Vector3(1, 0, 0), &matRotation);
+	Vector3 f(0, 0, 1);
+	Vector3 u(0, 1, 0);
+	Vector3 r(1, 0, 0);
+	D3DXVec3TransformNormal(&forward, &f, &matRotation);
+	D3DXVec3TransformNormal(&up, &u, &matRotation);
+	D3DXVec3TransformNormal(&right, &r, &matRotation);
 }
 
 void Camera::Move()
@@ -96,5 +102,6 @@ void Camera::Move()
 
 void Camera::View()
 {
-	D3DXMatrixLookAtLH(&matView, &position, &(position + forward), &up);
+	Vector3 at(position + forward);
+	D3DXMatrixLookAtLH(&matView, &position, &at, &up);
 }

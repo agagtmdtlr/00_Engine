@@ -49,7 +49,8 @@ void PBRInteriorDemo::Initialize()
 	IBL();
 	ChangeIBL();
 	UINT size = 1024;
-	shadow = new Shadow(shader, Vector3(0, 0, 0), 65, size, size);
+	Vector3 v(0, 0, 0);
+	shadow = new Shadow(shader, v, 65, size, size);
 	render2D = new Render2D();
 	render2D->GetTransform()->Position(150, D3D::Height() - 150, 0);
 	render2D->GetTransform()->Scale(300, 300, 1);

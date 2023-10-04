@@ -40,10 +40,9 @@ using namespace std;
 #pragma comment(lib, "Effects11d.lib")
 
 //ImGui
-#include <ImGui_New/imgui.h>
-#include <ImGui_New/imgui_impl_dx11.h>
-#include <ImGui_New/imgui_impl_win32.h>
-#pragma comment(lib, "ImGui_New/imgui.lib")
+#include "imgui/imgui.h"
+#include "imgui/imgui_impl_dx11.h"
+#include "imgui/imgui_impl_win32.h"
 
 //DirectXTex
 #include <DirectXTex.h>

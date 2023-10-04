@@ -24,27 +24,38 @@ DebugLine * DebugLine::Get()
 
 void DebugLine::RenderLine(Vector3 & start, Vector3 & end)
 {
-	RenderLine(start, end, Color(0, 1, 0, 1));
+	Color c(0, 1, 0, 1);
+	RenderLine(start, end, c);
 }
 
 void DebugLine::RenderLine(Vector3 & start, Vector3 & end, float r, float g, float b)
 {
-	RenderLine(start, end, Color(r, g, b, 1));
+	Color c(r, g, b, 1);
+	RenderLine(start, end, c);
 }
 
 void DebugLine::RenderLine(float x, float y, float z, float x2, float y2, float z2)
 {
-	RenderLine(Vector3(x, y, z), Vector3(x2, y2, z2), Color(0, 1, 0, 1));
+	Vector3 p0(x, y, z);
+	Vector3 p1(x2, y2, z2);
+	Color c(0, 1, 0, 1);
+	RenderLine(p0, p1, c );
 }
 
 void DebugLine::RenderLine(float x, float y, float z, float x2, float y2, float z2, float r, float g, float b)
 {
-	RenderLine(Vector3(x, y, z), Vector3(x2, y2, z2), Color(r, g, b, 1));
+	Vector3 p0(x, y, z);
+	Vector3 p1(x2, y2, z2);
+	Color c(r, g, b, 1);
+	RenderLine(p0, p1, c);
 }
 
 void DebugLine::RenderLine(float x, float y, float z, float x2, float y2, float z2, Color & color)
 {
-	RenderLine(Vector3(x, y, z), Vector3(x2, y2, z2), color);
+	Vector3 p0(x, y, z);
+	Vector3 p1(x2, y2, z2);
+
+	RenderLine(p0, p1, color);
 }
 
 void DebugLine::RenderLine(Vector3 & start, Vector3 & end, Color & color)
