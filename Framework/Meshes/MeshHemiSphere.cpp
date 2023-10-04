@@ -87,7 +87,7 @@ void MeshHemiSphere::Create()
 	v.push_back(MeshVertex(0, -radius / 2.0f, 0, 0, 0, 0, -1, 0, -1, 0, 0));
 
 	vertices = new MeshVertex[v.size()];
-	vertexCount = v.size();
+	vertexCount = static_cast<UINT>( v.size() );
 
 	copy(v.begin(), v.end(), stdext::checked_array_iterator<MeshVertex*>(vertices, vertexCount));
 	vector<UINT> i;
@@ -114,7 +114,7 @@ void MeshHemiSphere::Create()
 		}
 	}
 
-	UINT southPoleIndex = v.size() - 1;
+	UINT southPoleIndex = static_cast<UINT>( v.size() - 1 );
 	baseIndex = southPoleIndex - ringVertexCount;
 
 	for (UINT k = 0; k < sliceCount; k++)

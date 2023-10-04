@@ -15,22 +15,22 @@ public:
 	ModelPBR();
 	~ModelPBR();
 
-	UINT BoneCount() { return bones.size(); }
+	UINT BoneCount() { return static_cast<UINT>(bones.size()); }
 	vector<ModelBone *>& Bones() { return bones; }
 	ModelBone* BoneByIndex(UINT index) { return bones[index]; }
 	ModelBone* BoneByName(wstring name);
 
-	UINT MeshCount() { return meshes.size(); }
+	UINT MeshCount() { return static_cast<UINT>(meshes.size()); }
 	vector<SkinMesh *>& Meshes() { return meshes; }
 	SkinMesh* MeshByIndex(UINT index) { return meshes[index]; }
 	SkinMesh* MeshByName(wstring name);
 
-	UINT MaterialCount() { return materials.size(); }
+	UINT MaterialCount() { return static_cast<UINT>(materials.size()); }
 	vector<MaterialPBR *>& Materials() { return materials; }
 	MaterialPBR* MaterialByIndex(UINT index) { return materials[index]; }
 	MaterialPBR* MaterialByName(wstring name);
 
-	UINT ClipCount() { return clips.size(); }
+	UINT ClipCount() { return static_cast<UINT>(clips.size()); }
 	vector<ModelClip *>& Clips() { return clips; }
 	ModelClip* ClipByIndex(UINT index) { return clips[index]; }
 	ModelClip* ClipByName(wstring name);

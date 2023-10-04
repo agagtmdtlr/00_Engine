@@ -37,7 +37,7 @@ void MeshGrid::Create()
 	}
 
 	vertices = new MeshVertex[v.size()];
-	vertexCount = v.size();
+	vertexCount = static_cast<UINT>( v.size() );
 
 	copy(v.begin(), v.end(), stdext::checked_array_iterator<MeshVertex *>(vertices, vertexCount));
 
@@ -58,7 +58,7 @@ void MeshGrid::Create()
 	}
 
 	indices = new UINT[i.size()];
-	indexCount = i.size();
+	indexCount = static_cast<UINT>( i.size() );
 
 	copy(i.begin(), i.end(), stdext::checked_array_iterator<UINT *>(indices, indexCount));
 }

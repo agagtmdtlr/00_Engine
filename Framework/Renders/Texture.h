@@ -21,8 +21,8 @@ public:
 
 	wstring GetFile() { return file; }
 
-	UINT GetWidth() { return metaData.width; }
-	UINT GetHeight() { return metaData.height; }
+	UINT GetWidth() { return  static_cast<UINT>(metaData.width ); }
+	UINT GetHeight() { return static_cast<UINT>(metaData.height); }
 
 	void GetImageInfo(DirectX::TexMetadata* data)
 	{

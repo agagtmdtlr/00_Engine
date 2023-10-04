@@ -17,7 +17,7 @@ public:
 
 	Transform* AddTransform();
 	Transform* GetTransform(UINT index) { return transforms[index]; }
-	UINT GetTransformCount() { return transforms.size();	}
+	UINT GetTransformCount() { return static_cast<UINT>(transforms.size());	}
 	void UpdateTransforms();
 
 private:

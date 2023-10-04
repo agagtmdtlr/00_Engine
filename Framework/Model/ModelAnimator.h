@@ -37,7 +37,7 @@ public:
 	Transform* GetTransform(UINT index) { return transforms[index]; }
 	void UpdateTransforms();
 	// add for instancing method
-	UINT GetTransformCount() { return transforms.size(); }
+	UINT GetTransformCount() { return static_cast<UINT>(transforms.size()); }
 
 
 	void Pass(UINT pass);

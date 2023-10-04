@@ -58,7 +58,7 @@ void MeshCube::Create()
 
 
 	vertices = new MeshVertex[v.size()];
-	vertexCount = v.size();
+	vertexCount = static_cast<UINT>( v.size());
 
 	copy(v.begin(), v.end(), stdext::checked_array_iterator<MeshVertex *>(vertices, vertexCount));
 
