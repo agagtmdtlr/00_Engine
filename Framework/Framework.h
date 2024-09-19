@@ -39,7 +39,6 @@ using namespace std;
 #pragma comment(lib, "dxguid.lib")
 #pragma comment(lib, "Effects11d.lib")
 
-#define IMGUI_DEFINE_MATH_OPERATORS
 //ImGui
 #include "imgui/imgui.h"
 #include "imgui/imgui_impl_dx11.h"
